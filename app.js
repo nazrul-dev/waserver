@@ -7,7 +7,7 @@ import cors from 'cors'
 
 const app = express()
 
-const host = process.env.WA_SERVER_HOST || undefined
+
 const port = parseInt(process.env.WA_SERVER_PORT ?? 8000)
 
 app.use(cors())
