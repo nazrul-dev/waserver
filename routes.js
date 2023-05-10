@@ -9,9 +9,11 @@ const router = Router()
 router.use('/sessions', sessionsRoute)
 router.use('/chats', chatsRoute)
 router.use('/groups', groupsRoute)
-
+router.all('/', (req, res) => {
+    res.json({messegae:"running"})
+})
 router.all('*', (req, res) => {
-    response(res, 404, false, 'The requested url cannot be found.')
+    response(res, 403, false, 'The requested url cannot be found.')
 })
 
 export default router
